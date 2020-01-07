@@ -35,9 +35,12 @@ e.g. element at matrix[3][4] is guaranteed to be greater than or equal to elemen
 
 So we can solve this problem by running binary search over each row of the 2D matrix, one by one. However the time complexity of this approach will be O(m * log(n)), where m is the number of rows in the input matrix and n is the number of columns in the input matrix.
 
+### Can we do better : ❓
+
 ❗️ Note that we are given that the first element of next row will be greater than the last element of the current row. 
 
-So basically we can treat the entire 2D matrix as a sorted 1D matrix and perform a binary search.
+So basically we can treat the entire 2D matrix as a sorted 1D matrix and perform a binary search. 
+The time complexity of this approach will be O(log(m * n)) , where m is the number of rows in the input matrix and n is the number of columns in the input matrix, which is much better than O(m * log(n)) 😊
 
 ```java
 int start = 0;
