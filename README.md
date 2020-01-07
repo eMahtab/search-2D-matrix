@@ -33,6 +33,12 @@ Output: false
 There are lot of hints in this question, and its clearly telling us to use binary search as the elements in the 2D matrix are sorted.
 e.g. element at matrix[3][4] is guaranteed to be greater than or equal to element at matrix[3][3], since elements in each row are sorted in ascending order.
 
+❗️ Also we are given that the first element of next row will be greater than the last element of the current row. 
+
+So basically we can treat the entire 2D matrix as a sorted 1D matrix and perform a binary search.
+
+
+
 ## Implementation : 
 
 ```java
