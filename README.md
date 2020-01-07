@@ -33,5 +33,34 @@ Output: false
 
 ## Implementation : 
 
+```java
+public static boolean searchMatrix(int[][] matrix, int target) {
+      if(matrix == null || matrix.length == 0)
+        return false;  
+        
+      int m = matrix.length;
+      int n = matrix[0].length;
+
+      int start = 0;
+      int end = m * n - 1;
+       
+      while(start <= end){
+         int mid = (start + end) / 2;
+         int row = mid / n;
+         int column = mid % n;
+          
+         if(matrix[row][column] > target){
+           end = mid - 1;
+         } else if(matrix[row][column] < target){
+           start = mid + 1;
+         } else{
+           return true;
+         }
+      }
+        
+    return false;
+  }
+```
+
 ## References :
 https://www.programcreek.com/2013/01/leetcode-search-a-2d-matrix-java
