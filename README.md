@@ -50,6 +50,9 @@ n * log(m) = 8 * log(8) = 8 * 3 = 24
 log(m * n) = log(8 * 8) = log(64) = 6
 
 ```
+### Coding the second approach : 
+
+The start index will be 0 and end index will be `m * n - 1`
 
 ```java
 int start = 0;
