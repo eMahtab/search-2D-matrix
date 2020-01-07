@@ -37,7 +37,12 @@ e.g. element at matrix[3][4] is guaranteed to be greater than or equal to elemen
 
 So basically we can treat the entire 2D matrix as a sorted 1D matrix and perform a binary search.
 
+```java
+int start = 0;
+int end = m * n - 1; // <-- m is number of rows and n is number of columns
 
+int mid = (start + end) / 2;
+```
 
 ## Implementation : 
 
