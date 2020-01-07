@@ -41,7 +41,14 @@ So basically we can treat the entire 2D matrix as a sorted 1D matrix and perform
 int start = 0;
 int end = m * n - 1; // <-- m is number of rows and n is number of columns
 
+```
+Now the most important thing is, how we find the row and column for the element at `mid`.
+If we look carefully, we can see that, for mid element row will be `(mid / n)` and column will be `(mid % n)`
+
+```java
 int mid = (start + end) / 2;
+int row = mid / n;
+int column = mid % n;
 ```
 
 ## Implementation : 
