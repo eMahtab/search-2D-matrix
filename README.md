@@ -42,6 +42,15 @@ So we can solve this problem by running binary search over each row of the 2D ma
 So basically we can treat the entire 2D matrix as a sorted 1D matrix and perform a binary search. 
 The time complexity of this approach will be O(log(m * n)) , where m is the number of rows in the input matrix and n is the number of columns in the input matrix, which is much better than O(m * log(n)) 😊
 
+Below example shows that log(m * n) is much better than n * log(m)
+```
+n = 8 (number of rows)
+m = 8 (number of columns)
+n * log(m) = 8 * log(8) = 8 * 3 = 24
+log(m * n) = log(8 * 8) = log(64) = 6
+
+```
+
 ```java
 int start = 0;
 int end = m * n - 1; // <-- m is number of rows and n is number of columns
