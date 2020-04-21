@@ -105,6 +105,30 @@ Runtime Complexity = O(log(m * n))
 Space Complexity   = O(1)
 ```
 
+# Implementation 2 :
+```java
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        if(matrix == null || matrix.length == 0)
+            return false;
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        
+        int row  = 0;
+        int col = cols - 1;
+        while(row < rows && col >= 0) {
+            if(target < matrix[row][col])
+                col--;
+            else if(target > matrix[row][col])
+                row++;
+            else 
+                return true;
+        }
+        return false;
+    }
+}
+```
+
 ## References :
 1. https://www.youtube.com/watch?v=dHJDhsvBd8c
 2. https://www.programcreek.com/2013/01/leetcode-search-a-2d-matrix-java
